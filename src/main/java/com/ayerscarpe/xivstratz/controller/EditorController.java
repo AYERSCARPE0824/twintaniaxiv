@@ -13,22 +13,26 @@ public class EditorController {
     EditorServiceImpl editorService;
 
     public EditorController(EditorServiceImpl editorService) {
+
         this.editorService = editorService;
+
     }
 
     @ApiOperation("获取文章")
     @GetMapping("/editor/get")
     @ResponseBody
     public Editor get(@RequestParam("id")Integer id){
-        //TODO-获取数据库中的数据
+
         return editorService.query(id);
+
     }
 
     @ApiOperation("保存文章到数据库")
     @PostMapping("/editor/add")
     @ResponseBody
     public int add(@RequestBody Editor editor){
-        //TODO-保存文章到数据库
+
         return editorService.add(editor);
+
     }
 }

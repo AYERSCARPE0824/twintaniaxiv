@@ -24,11 +24,27 @@ public class Result {
         return res;
     }
 
+    public static Result regSuccess(){
+        Result res = new Result();
+        res.setSuccess(true);
+        res.setCode(ResultCodeEnums.SUCCESS.getCode());
+        res.setMessage("注册成功");
+        return res;
+    }
+
     public static Result error(){
         Result res = new Result();
         res.setSuccess(false);
         res.setCode(ResultCodeEnums.ERROR.getCode());
         res.setMessage("用户名或密码错误");
+        return res;
+    }
+
+    public static Result regError(){
+        Result res = new Result();
+        res.setSuccess(false);
+        res.setCode(ResultCodeEnums.ERROR.getCode());
+        res.setMessage("注册失败");
         return res;
     }
 

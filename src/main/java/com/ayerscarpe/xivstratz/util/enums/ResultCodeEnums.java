@@ -7,6 +7,5 @@ import lombok.Getter;
 public enum ResultCodeEnums {
     SUCCESS(20000),
     ERROR(20001);
-
     private final int code;
 }

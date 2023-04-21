@@ -41,4 +41,10 @@ public class UserController {
     public Result logout(){
         return Result.success();
     }
+
+
+    @PostMapping("/user/register")
+    public Result register(@RequestBody User user){
+        return userService.insert(user);
+    }
 }
